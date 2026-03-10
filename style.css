@@ -99,18 +99,14 @@ body {
 .header-photo {
   max-width: 900px;
   margin: 0 auto;
-  padding: 15px 15px 60px 15px; /* Augmenté le padding du BAS (60px) pour dégager l'image */
+  padding: 15px 15px; /* Augmenté pour mieux voir l'image */
   background-image: url("black_white_gradient.jpeg");
   background-size: cover;
-  
-  /* CHANGE CECI : 'bottom' force l'affichage du bas de l'image */
-  background-position: bottom center; 
-  
+  background-position: center;
   border-radius: 6px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  min-height: 200px; /* Optionnel : donne une hauteur minimale garantie */
 }
 
 .header-text h1 {
