@@ -99,8 +99,7 @@ body {
 .header-photo {
   max-width: 900px;
   margin: 0 auto;
-  /* Haut: 15px | Droite: 15px | Bas: 45px | Gauche: 15px */
-  padding: 20px 15px 45px 15px; 
+  padding: 15px 15px; /* Augmenté pour mieux voir l'image */
   background-image: url("gradient_black.png");
   background-size: cover;
   background-position: center;
@@ -108,8 +107,6 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* Optionnel : pour être sûr que ça ne reste pas coincé par le contenu */
-  min-height: 120px; 
 }
 
 .header-text h1 {
