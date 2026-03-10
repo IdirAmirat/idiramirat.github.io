@@ -102,7 +102,7 @@ body {
   padding: 15px 15px; /* Augmenté pour mieux voir l'image */
   background-image: url("black_white_gradient.png");
   background-size: cover;
-  background-position: center;
+  background-position: bottom center;
   border-radius: 6px;
   display: flex;
   justify-content: flex-start;
