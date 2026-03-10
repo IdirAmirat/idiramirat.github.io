@@ -120,38 +120,38 @@ body {
 /* --- Navigation --- */
 .nav-banner {
   font-family: 'Playfair Display', serif;
-  /* Remplacement de la couleur unie par un dégradé très subtil */
   background: linear-gradient(135deg, #7c0d10 0%, #9a1a1e 100%);
-  padding: 10px 0; /* Un peu plus fin pour plus d'élégance */
-  border-radius: 6px; /* Bords légèrement plus arrondis */
-  margin-top: 10px;
+  padding: 10px 5px; /* Réduit un peu le padding vertical */
+  border-radius: 6px;
+  margin: 10px auto; /* Centre la bannière */
+  max-width: 1000px; /* Empêche la bannière d'être trop large sur très grand écran */
   position: sticky; 
-  top: 10px; /* Ajout d'un petit espace avec le haut au scroll */
+  top: 5px;
   z-index: 100;
-  /* Ombre plus douce et plus large pour un effet de "flottaison" */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 .nav-banner nav {
-  text-align: center;
-  display: flex; /* Utilisation de Flexbox pour un alignement parfait */
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; /* CRUCIAL : permet de passer à la ligne sur téléphone */
+  gap: 10px 20px; /* Gère l'espace entre les liens (haut/bas et gauche/droite) */
 }
 
 .nav-banner nav a {
-  margin: 0 18px; /* Espacement équilibré */
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.05rem; /* Légèrement plus grand pour la lisibilité */
-  color: #f8f8f8; /* Un blanc très légèrement cassé, moins agressif */
-  letter-spacing: 0.8px; /* Texte plus aéré et haut de gamme */
-  position: relative; /* Nécessaire pour l'effet de soulignement */
+  font-size: 1rem;
+  color: #f8f8f8;
+  letter-spacing: 0.5px;
+  position: relative;
   transition: all 0.3s ease;
-  padding: 5px 0;
+  padding: 5px 2px;
+  white-space: nowrap; /* Empêche un mot d'être coupé en deux */
 }
 
-/* Effet de soulignement élégant au survol (Underline slide) */
+/* Effet de soulignement (on le garde, c'est joli !) */
 .nav-banner nav a::after {
   content: '';
   position: absolute;
@@ -163,17 +163,21 @@ body {
   transition: width 0.3s ease;
 }
 
-.nav-banner nav a:hover {
-  color: #ffcccc;
-}
-
 .nav-banner nav a:hover::after {
-  width: 100%; /* Le soulignement apparaît de gauche à droite */
+  width: 100%;
 }
 
-/* Petit effet au clic pour le feedback utilisateur */
-.nav-banner nav a:active {
-  transform: translateY(1px);
+/* --- AJUSTEMENTS TÉLÉPHONE --- */
+@media (max-width: 600px) {
+  .nav-banner {
+    margin: 5px; /* Moins de marge sur les côtés */
+    padding: 8px 2px;
+  }
+  
+  .nav-banner nav a {
+    font-size: 0.85rem; /* On diminue un peu la taille du texte */
+    margin: 0 5px; /* On resserre les liens */
+  }
 }
 
 /* --- LOGIQUE DE BASCULE DES SECTIONS --- */
