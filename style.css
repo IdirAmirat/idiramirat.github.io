@@ -100,7 +100,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: 15px 15px; /* Augmenté pour mieux voir l'image */
-  background-image: url("gradient_black.png");
+  background-image: url("black_white_gradient.png");
   background-size: cover;
   background-position: center;
   border-radius: 6px;
