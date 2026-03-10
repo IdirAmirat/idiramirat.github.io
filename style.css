@@ -120,38 +120,60 @@ body {
 /* --- Navigation --- */
 .nav-banner {
   font-family: 'Playfair Display', serif;
-  background-color: #7c0d10;
-  padding: 12px 0; /* Un peu plus fin pour plus de modernité */
-  border-radius: 4px;
+  /* Remplacement de la couleur unie par un dégradé très subtil */
+  background: linear-gradient(135deg, #7c0d10 0%, #9a1a1e 100%);
+  padding: 10px 0; /* Un peu plus fin pour plus d'élégance */
+  border-radius: 6px; /* Bords légèrement plus arrondis */
   margin-top: 10px;
   position: sticky; 
-  top: 0;
+  top: 10px; /* Ajout d'un petit espace avec le haut au scroll */
   z-index: 100;
-  /* Ajout d'une ombre très discrète pour le scroll */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+  /* Ombre plus douce et plus large pour un effet de "flottaison" */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
 }
 
 .nav-banner nav {
   text-align: center;
+  display: flex; /* Utilisation de Flexbox pour un alignement parfait */
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-banner nav a {
-  margin: 0 20px; /* Un peu plus d'espace entre les liens */
+  margin: 0 18px; /* Espacement équilibré */
   text-decoration: none;
   font-weight: 600;
-  color: #f0f0f0;
-  letter-spacing: 0.5px; /* Rend le texte plus aéré */
+  font-size: 1.05rem; /* Légèrement plus grand pour la lisibilité */
+  color: #f8f8f8; /* Un blanc très légèrement cassé, moins agressif */
+  letter-spacing: 0.8px; /* Texte plus aéré et haut de gamme */
+  position: relative; /* Nécessaire pour l'effet de soulignement */
   transition: all 0.3s ease;
-  display: inline-block;
+  padding: 5px 0;
+}
+
+/* Effet de soulignement élégant au survol (Underline slide) */
+.nav-banner nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcccc;
+  transition: width 0.3s ease;
 }
 
 .nav-banner nav a:hover {
   color: #ffcccc;
-  transform: translateY(-1px); /* Effet de micro-soulèvement très sobre */
 }
 
+.nav-banner nav a:hover::after {
+  width: 100%; /* Le soulignement apparaît de gauche à droite */
+}
+
+/* Petit effet au clic pour le feedback utilisateur */
 .nav-banner nav a:active {
-  transform: translateY(0); /* Retour à la normale quand on clique */
+  transform: translateY(1px);
 }
 
 /* --- LOGIQUE DE BASCULE DES SECTIONS --- */
