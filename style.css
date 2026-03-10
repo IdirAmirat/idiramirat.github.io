@@ -121,12 +121,14 @@ body {
 .nav-banner {
   font-family: 'Playfair Display', serif;
   background-color: #7c0d10;
-  padding: 14px 0;
+  padding: 12px 0; /* Un peu plus fin pour plus de modernité */
   border-radius: 4px;
   margin-top: 10px;
-  position: sticky; /* Reste en haut au scroll */
+  position: sticky; 
   top: 0;
   z-index: 100;
+  /* Ajout d'une ombre très discrète pour le scroll */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
 }
 
 .nav-banner nav {
@@ -134,15 +136,22 @@ body {
 }
 
 .nav-banner nav a {
-  margin: 0 15px;
+  margin: 0 20px; /* Un peu plus d'espace entre les liens */
   text-decoration: none;
   font-weight: 600;
   color: #f0f0f0;
-  transition: color 0.3s;
+  letter-spacing: 0.5px; /* Rend le texte plus aéré */
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .nav-banner nav a:hover {
   color: #ffcccc;
+  transform: translateY(-1px); /* Effet de micro-soulèvement très sobre */
+}
+
+.nav-banner nav a:active {
+  transform: translateY(0); /* Retour à la normale quand on clique */
 }
 
 /* --- LOGIQUE DE BASCULE DES SECTIONS --- */
