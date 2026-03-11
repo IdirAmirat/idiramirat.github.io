@@ -99,7 +99,7 @@ body {
 .header-photo {
   max-width: 900px;
   margin: 0 auto;
-  padding: 15px 15px; /* Augmenté pour mieux voir l'image */
+  padding: 18px 18px; /* Augmenté pour mieux voir l'image */
   background-image: url("black_white_gradient.png");
   background-size: cover;
   background-position: bottom center;
