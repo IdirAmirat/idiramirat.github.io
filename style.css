@@ -1,328 +1,327 @@
 html {
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 /* Positionnement des drapeaux */
 .language-switch {
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  display: flex;
-  gap: 10px;
-  gap: 25px; /* Espace entre FR et ENG */
-  z-index: 1000;
+position: absolute;
+top: 15px;
+left: 20px;
+display: flex;
+gap: 10px;
+gap: 25px; /* Espace entre FR et ENG */
+z-index: 1000;
 }
 
 /* Chaque bloc (Drapeau + Texte) */
 .lang-item {
-  display: flex;
-  flex-direction: column; /* FORCE LE TEXTE EN DESSOUS */
-  align-items: center;    /* Centre le texte sous le drapeau */
-  text-decoration: none;
-  transition: transform 0.2s;
+display: flex;
+flex-direction: column; /* FORCE LE TEXTE EN DESSOUS */
+align-items: center; /* Centre le texte sous le drapeau */
+text-decoration: none;
+transition: transform 0.2s;
 }
 
 /* Style des drapeaux */
 .lang-item img {
-  width: 50px; /* Taille assez grande pour être bien visible */
-  height: auto;
-  border-radius: 4px;
-  border: 2px solid white;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+width: 50px; /* Taille assez grande pour être bien visible */
+height: auto;
+border-radius: 4px;
+border: 2px solid white;
+box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 
 /* Style pour le switch de langue */
 .language-switch a {
-    opacity: 0.5; /* Par défaut, les drapeaux sont un peu effacés */
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    filter: grayscale(40%); /* Un peu de gris pour l'inactif */
+opacity: 0.5; /* Par défaut, les drapeaux sont un peu effacés */
+transition: all 0.3s ease;
+display: inline-flex;
+align-items: center;
+text-decoration: none;
+filter: grayscale(40%); /* Un peu de gris pour l'inactif */
 }
 
 .language-switch a:hover {
-    opacity: 1;
-    filter: grayscale(0%);
+opacity: 1;
+filter: grayscale(0%);
 }
 
 /* La classe qui définit le drapeau "enfoncé" / actif */
 .language-switch a.active {
-    opacity: 1;
-    filter: grayscale(0%);
-    pointer-events: none; /* Désactive le clic sur la langue déjà sélectionnée */
-    border-bottom: 2px solid #800020; /* Petit trait de rappel de ta couleur bordeaux */
-    padding-bottom: 2px;
+opacity: 1;
+filter: grayscale(0%);
+pointer-events: none; /* Désactive le clic sur la langue déjà sélectionnée */
+border-bottom: 2px solid #800020; /* Petit trait de rappel de ta couleur bordeaux */
+padding-bottom: 2px;
 }
 
 .language-switch img {
-    width: 25px;
-    height: auto;
-    margin-right: 5px;
+width: 25px;
+height: auto;
+margin-right: 5px;
 }
 
 /* Style du texte EN DESSOUS */
 .lang-text {
-  color: white;
-  font-family: 'Montserrat', sans-serif; /* Utilise ta police forte */
-  font-weight: 900;      /* Épaisseur maximale */
-  font-size: 1.1em;      /* Taille du texte */
-  margin-top: 8px;       /* Espace entre le drapeau et le texte */
-  text-transform: uppercase;
-  text-shadow: 2px 2px 5px rgba(0,0,0,1); /* Ombre forte pour lire sur n'importe quel fond */
-  letter-spacing: 1px;
+color: white;
+font-family: 'Montserrat', sans-serif; /* Utilise ta police forte */
+font-weight: 900; /* Épaisseur maximale */
+font-size: 1.1em; /* Taille du texte */
+margin-top: 8px; /* Espace entre le drapeau et le texte */
+text-transform: uppercase;
+text-shadow: 2px 2px 5px rgba(0,0,0,1); /* Ombre forte pour lire sur n'importe quel fond */
+letter-spacing: 1px;
 }
 
 /* Effet au survol */
 .lang-item:hover {
-  transform: scale(1.15);
+transform: scale(1.15);
 }
 
 /* Important : pour que les drapeaux se placent par rapport au header */
 .header-photo {
-  position: relative; /* Permet le placement 'absolute' des drapeaux à l'intérieur */
-  /* ... reste de ton code header ... */
+position: relative; /* Permet le placement 'absolute' des drapeaux à l'intérieur */
+/* ... reste de ton code header ... */
 }
 
 /* --- Global --- */
 body {
-  font-family: "Source Sans Pro", Arial, sans-serif;
-  line-height: 1.6;
-  margin: 20px auto;
-  max-width: 900px;
-  color: #222;
-  background-color: #d8d4d4;
+font-family: "Source Sans Pro", Arial, sans-serif;
+line-height: 1.6;
+margin: 20px auto;
+max-width: 900px;
+color: #222;
+background-color: #d8d4d4;
 }
 
 /* --- Header --- */
 .header-photo {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 18px 18px; /* Augmenté pour mieux voir l'image */
-  background-image: url("black_white_gradient.png");
-  background-size: cover;
-  background-position: bottom center;
-  border-radius: 6px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+max-width: 900px;
+margin: 0 auto;
+padding: 18px 18px; /* Augmenté pour mieux voir l'image */
+background-image: url("black_white_gradient.png");
+background-size: cover;
+background-position: bottom center;
+border-radius: 6px;
+display: flex;
+justify-content: flex-start;
+align-items: center;
 }
 
 .header-text h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 2em;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Ombre pour lisibilité */
+font-family: 'Playfair Display', serif;
+font-weight: 700;
+font-size: 2em;
+color: #ffffff;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Ombre pour lisibilité */
 }
 
 /* --- Navigation --- */
 .nav-banner {
-  font-family: 'Playfair Display', serif;
-  background: linear-gradient(135deg, #7c0d10 0%, #9a1a1e 100%);
-  padding: 10px 5px; /* Réduit un peu le padding vertical */
-  border-radius: 6px;
-  margin: 10px auto; /* Centre la bannière */
-  max-width: 1000px; /* Empêche la bannière d'être trop large sur très grand écran */
-  /* --- CHANGEMENTS ICI --- */
-  position: relative; /* Elle suit maintenant le flux normal de la page */
-  top: 0;             /* On remet à zéro */
-  z-index: 100;
-  /* ------------------------ */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+font-family: 'Playfair Display', serif;
+background: linear-gradient(135deg, #7c0d10 0%, #9a1a1e 100%);
+padding: 10px 5px; /* Réduit un peu le padding vertical */
+border-radius: 6px;
+margin: 10px auto; /* Centre la bannière */
+max-width: 1000px; /* Empêche la bannière d'être trop large sur très grand écran */
+/* --- CHANGEMENTS ICI --- */
+position: relative; /* Elle suit maintenant le flux normal de la page */
+top: 0; /* On remet à zéro */
+z-index: 100;
+/* ------------------------ */
+box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 .nav-banner nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; /* CRUCIAL : permet de passer à la ligne sur téléphone */
-  gap: 10px 20px; /* Gère l'espace entre les liens (haut/bas et gauche/droite) */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap; /* CRUCIAL : permet de passer à la ligne sur téléphone */
+gap: 10px 20px; /* Gère l'espace entre les liens (haut/bas et gauche/droite) */
 }
 
 .nav-banner nav a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #f8f8f8;
-  letter-spacing: 0.5px;
-  position: relative;
-  transition: all 0.3s ease;
-  padding: 5px 2px;
-  white-space: nowrap; /* Empêche un mot d'être coupé en deux */
+text-decoration: none;
+font-weight: 600;
+font-size: 1rem;
+color: #f8f8f8;
+letter-spacing: 0.5px;
+position: relative;
+transition: all 0.3s ease;
+padding: 5px 2px;
+white-space: nowrap; /* Empêche un mot d'être coupé en deux */
 }
 
 /* Effet de soulignement (on le garde, c'est joli !) */
 .nav-banner nav a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #ffcccc;
-  transition: width 0.3s ease;
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #ffcccc;
+transition: width 0.3s ease;
 }
 
 .nav-banner nav a:hover::after {
-  width: 100%;
+width: 100%;
 }
 
 /* --- AJUSTEMENTS TÉLÉPHONE --- */
 @media (max-width: 600px) {
-  .nav-banner {
-    margin: 5px; /* Moins de marge sur les côtés */
-    padding: 8px 2px;
-  }
-  
-  .nav-banner nav a {
-    font-size: 0.85rem; /* On diminue un peu la taille du texte */
-    margin: 0 5px; /* On resserre les liens */
-  }
+.nav-banner {
+margin: 5px; /* Moins de marge sur les côtés */
+padding: 8px 2px;
+}
+.nav-banner nav a {
+font-size: 0.85rem; /* On diminue un peu la taille du texte */
+margin: 0 5px; /* On resserre les liens */
+}
 }
 
 /* --- LOGIQUE DE BASCULE DES SECTIONS --- */
 
 /* 1. On cache toutes les sections par défaut */
 .content-section {
-  display: none;
-  animation: fadeIn 0.5s; /* Petit effet de transition */
+display: none;
+animation: fadeIn 0.5s; /* Petit effet de transition */
 }
 
 /* 2. On affiche la section qui est la cible (#) dans l'URL */
 .content-section:target {
-  display: block;
+display: block;
 }
 
 /* 3. Si aucune section n'est ciblée (accueil), on affiche 'about' */
 /* Note: :has() est supporté par tous les navigateurs modernes */
 body:not(:has(section:target)) #about {
-  display: block;
+display: block;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
 }
 
 /* --- Contenu principal --- */
 main {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 6px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  margin-top: 20px;
-  min-height: 400px; /* Évite les sauts de page */
+background-color: #ffffff;
+padding: 40px;
+border-radius: 6px;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+margin-top: 20px;
+min-height: 400px; /* Évite les sauts de page */
 }
 
 main h2 {
-  color: #003366;
-  border-bottom: 2px solid #9a0f13;
-  padding-bottom: 8px;
-  margin-top: 0;
+color: #003366;
+border-bottom: 2px solid #9a0f13;
+padding-bottom: 8px;
+margin-top: 0;
 }
 
 /* --- À propos --- */
 .about-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
+display: flex;
+align-items: flex-start;
+gap: 30px;
 }
 
 .about-photo {
-  width: 180px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+width: 180px;
+border-radius: 4px;
+border: 1px solid #ddd;
+box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
 
 .about-text {
-  flex: 1;
+flex: 1;
 }
 
 .contact-info {
-  margin-top: 20px;
-  padding: 15px;
-  background: #f9f9f9;
-  border-left: 4px solid #9a0f13;
+margin-top: 20px;
+padding: 15px;
+background: #f9f9f9;
+border-left: 4px solid #9a0f13;
 }
 
 /* --- Footer --- */
 footer {
-  text-align: center;
-  font-size: 0.9em;
-  color: #666;
-  padding: 20px 0;
-  margin-top: 40px;
+text-align: center;
+font-size: 0.9em;
+color: #666;
+padding: 20px 0;
+margin-top: 40px;
 }
 
 /* Style pour la photo et sa légende */
 .landscape-item {
-  margin: 30px 0;
-  text-align: center; /* Centre l'image et la légende */
+margin: 30px 0;
+text-align: center; /* Centre l'image et la légende */
 }
 
 .landscape-img {
-  max-width: 100%;    /* L'image ne dépasse jamais du bloc */
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+max-width: 100%; /* L'image ne dépasse jamais du bloc */
+height: auto;
+border-radius: 4px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .landscape-item figcaption {
-  margin-top: 10px;
-  font-style: italic; /* Légende en italique */
-  color: #555;        /* Gris pour plus de douceur */
-  font-family: 'Playfair Display', serif; /* Rappel de ta police élégante */
+margin-top: 10px;
+font-style: italic; /* Légende en italique */
+color: #555; /* Gris pour plus de douceur */
+font-family: 'Playfair Display', serif; /* Rappel de ta police élégante */
 }
 
 /* Style des catégories de publications */
 .pub-category {
-  margin-top: 30px;
+margin-top: 30px;
 }
 
 .pub-category h3 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.3em;
-  color: #9a0f13; /* Ton rouge pour rappeler la navigation */
-  border-left: 4px solid #9a0f13;
-  padding-left: 10px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 1.3em;
+color: #9a0f13; /* Ton rouge pour rappeler la navigation */
+border-left: 4px solid #9a0f13;
+padding-left: 10px;
+margin-bottom: 15px;
+text-transform: uppercase;
+letter-spacing: 1px;
 }
 
 /* Style des liens [PDF], [DOI], etc. */
 .pub-link {
-  text-decoration: none;
-  color: #003366;
-  font-weight: bold;
-  font-size: 0.9em;
-  margin-left: 10px;
+text-decoration: none;
+color: #003366;
+font-weight: bold;
+font-size: 0.9em;
+margin-left: 10px;
 }
 
 .pub-link:hover {
-  text-decoration: underline;
-  color: #9a0f13;
+text-decoration: underline;
+color: #9a0f13;
 }
 
 /* Espacement entre les publications */
 .list-design li {
-  margin-bottom: 20px;
-  line-height: 1.5;
+margin-bottom: 20px;
+line-height: 1.5;
 }
 
 
 /* --- Responsive --- */
 @media (max-width: 600px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .nav-banner nav a {
-    display: inline-block;
-    margin: 5px 10px;
-  }
+.about-container {
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+.nav-banner nav a {
+display: inline-block;
+margin: 5px 10px;
+}
 }
