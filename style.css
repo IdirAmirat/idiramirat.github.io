@@ -125,9 +125,11 @@ body {
   border-radius: 6px;
   margin: 10px auto; /* Centre la bannière */
   max-width: 1000px; /* Empêche la bannière d'être trop large sur très grand écran */
-  position: sticky; 
-  top: 5px;
+  /* --- CHANGEMENTS ICI --- */
+  position: relative; /* Elle suit maintenant le flux normal de la page */
+  top: 0;             /* On remet à zéro */
   z-index: 100;
+  /* ------------------------ */
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
